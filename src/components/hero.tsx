@@ -27,7 +27,7 @@ const Page = () => {
                 </div>
             </div>
             <div className='xl:w-[650px] flex justify-center'>
-                <Image src={Hero_img} width={500} height={500} alt='hero img' />
+                <Image src={Hero_img} width={500} height={500} alt='hero img' priority />
             </div>
         </div>
     )

@@ -56,6 +56,7 @@ const Header = () => {
                         width={200}
                         height={200}
                         alt="logotype"
+                        priority
                     />
                 </div>
                 <div className="hidden md:flex md:items-center gap-6">
