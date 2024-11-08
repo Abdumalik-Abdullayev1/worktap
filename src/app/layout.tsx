@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from '@/layout/header'
-import Hero from '@/layout/hero'
-import Actual from '@/layout/actual'
-import Freelancers from '@/layout/freelancers'
-import Tasks from '@/layout/tasks'
+import Header from '@/components/header'
+import Freelancers from '@/app/home/freelancers'
+import Tasks from '@/app/home/tasks'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,10 +32,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header/>
-        <Hero/>
-        <Actual/>
-        <Freelancers/>
-        <Tasks/>
         {children}
       </body>
     </html>
