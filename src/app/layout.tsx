@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from '../components/header'
-import Hero from '../components/hero'
+import Header from '@/layout/header'
+import Hero from '@/layout/hero'
+import Actual from '@/layout/actual'
+import Freelancers from '@/layout/freelancers'
+import Tasks from '@/layout/tasks'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,6 +35,9 @@ export default function RootLayout({
       >
         <Header/>
         <Hero/>
+        <Actual/>
+        <Freelancers/>
+        <Tasks/>
         {children}
       </body>
     </html>
