@@ -3,15 +3,17 @@
 import React from 'react'
 import Image from 'next/image'
 import Hero_img from '../assets/hero_img.svg'
-import Actual from '@/app/home/actual'
-import Freelancers from '@/app/home/freelancers'
-import Tasks from '@/app/home/tasks'
+import Actual from '@/components/home/actual'
+import Freelancers from '@/components/home/freelancers'
+import Tasks from '@/components/home/tasks'
+import Workspace from '@/components/home/workspace'
+import Footer from '@/components/footer'
 
 
 const Page = () => {
     return (
       <>
-        <div className='lg:flex items-center px-10 xl:px-32 mt-10 justify-between'>
+        <div className='lg:flex items-center px-10 xl:px-32 mt-28 justify-between'>
             <div className='flex flex-col gap-3 w-full lg:w-[50%]'>
                 <h1 className='font-semibold text-[28px] sm:text-[40px] lg:text-[46px]'>Покупайте фриланс-услуги в <span className='text-green-600'>два клика</span></h1>
                 <p className='text-sm sm:text-lg'>Ворк — единица работы продавца, которую можно купить как товар в магазине </p>
@@ -38,6 +40,8 @@ const Page = () => {
         <Actual/>
         <Freelancers/>
         <Tasks/>
+        <Workspace/>
+        <Footer/>
       </>
     )
 }

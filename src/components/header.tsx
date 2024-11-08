@@ -49,7 +49,7 @@ const Header = () => {
 
     return (
         <div>
-            <div className="flex items-center justify-between px-10 xl:px-32 py-4 bg-white shadow-md">
+            <div className="flex items-center justify-between px-10 xl:px-32 py-4 bg-white shadow-md fixed w-full top-0">
                 <div className='w-[130px] sm:w-[170px] lg:w-[200px]'>
                     <Image
                         src={logo}
@@ -71,10 +71,12 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className='hidden xl:flex gap-5'>
-                    <Link href='/sign-in'>
+                    <Link href='/sign-up'>
                         <button className='bg-slate-200 text-green-600 px-[30px] py-[10px] rounded-[50px]'>Регистрация</button>
                     </Link>
-                    <button className='bg-green-600 text-slate-200 px-[30px] py-[10px] rounded-[50px]'>Войти</button>
+                    <Link href='/sign-in'>
+                        <button className='bg-green-600 text-slate-200 px-[30px] py-[10px] rounded-[50px]'>Войти</button>
+                    </Link>
                 </div>
                 <div className="text-2xl xl:hidden">
                     <label htmlFor="menu-toggle" className="cursor-pointer">
@@ -103,8 +105,12 @@ const Header = () => {
                         ))}
                     </ul>
                     <div className='flex flex-col mt-5 gap-5'>
-                        <button className='bg-slate-200 text-green-600 px-[30px] py-[10px] rounded-[50px]'>Регистрация</button>
-                        <button className='bg-green-600 text-slate-200 px-[30px] py-[10px] rounded-[50px]'>Войти</button>
+                        <Link href='/sign-up'>
+                            <button className='bg-slate-200 text-green-600 px-[30px] py-[10px] rounded-[50px]'>Регистрация</button>
+                        </Link>
+                        <Link href='/sign-in'>
+                            <button className='bg-green-600 text-slate-200 px-[30px] py-[10px] rounded-[50px]'>Войти</button>
+                        </Link>
                     </div>
                 </div>
             </div>
