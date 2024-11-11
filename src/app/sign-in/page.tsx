@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FcGoogle } from "react-icons/fc";
+import { useRouter } from 'next/navigation';
 import SignUp from '@/assets/Sign-up.svg';
 
 interface SignUpType {
@@ -11,12 +12,13 @@ interface SignUpType {
 }
 
 const Page = () => {
+    const router = useRouter();
     const [formData, setFormData] = useState<SignUpType>({
         email: '',
         password: '',
     });
-
     const [errorMessage, setErrorMessage] = useState<string>('');
+
     useEffect(() => {
         const savedData = localStorage.getItem('signUpData');
         if (savedData) {
@@ -41,6 +43,7 @@ const Page = () => {
         ) {
             console.log('Login successful!');
             setErrorMessage('');
+            router.push('/profile'); // Redirects to profile page
         } else {
             setErrorMessage('Неверный email или пароль.');
         }
@@ -95,7 +98,7 @@ const Page = () => {
                         form='submit'
                         className="w-full bg-green-600 text-slate-200 px-[30px] py-[10px] rounded-[50px]"
                     >
-                        Зарегестрироваться
+                        Войти
                     </button>
                     <button
                         className="w-full bg-[rgb(45,55,72)] text-slate-200 px-[30px] py-[10px] rounded-[50px] text-sm flex items-center gap-1">
